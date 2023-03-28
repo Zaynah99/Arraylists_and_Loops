@@ -1,3 +1,6 @@
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class Runner {
@@ -33,7 +36,7 @@ public class Runner {
         Collections.sort(scottishIslands);
 //        9. Print out all the islands using a for loop
 
-        for(String island : scottishIslands) {
+        for (String island : scottishIslands) {
             System.out.println(island);
         }
         System.out.println(scottishIslands);
@@ -46,46 +49,65 @@ public class Runner {
         System.out.println("numbers: " + numbers);
 
 //        1. Print out a list of the even integers
-        int a[] = {1,1,4,2,7,1,6,15,13,99,7};
+        int a[] = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
         System.out.println("Even Numbers: ");
-        for(int i = 0; i<a.length;i++){
-            if(a[i]%2==0){
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
                 System.out.println(a[i]);
             }
         }
 //        2. Print the difference between the largest and smallest value
-        int[] arrayNumbers = {1,1,4,2,7,1,6,15,13,99,7};
+        int[] arrayNumbers = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
         System.out.println("Original Array: " + Arrays.toString(arrayNumbers));
         int max_val = arrayNumbers[0];
         int min = arrayNumbers[0];
 
-        for (int i =1; i < arrayNumbers.length; i++) {
-            if(arrayNumbers[i] > max_val)
-                max_val = arrayNumbers [i];
+        for (int i = 1; i < arrayNumbers.length; i++) {
+            if (arrayNumbers[i] > max_val)
+                max_val = arrayNumbers[i];
 
             else if (arrayNumbers[i] < min)
                 min = arrayNumbers[i];
         }
         System.out.println("The difference between the largest and smallest values of our array is: " + (max_val - min));
 
-        }
+    }
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
 
-//        4. Print the sum of the numbers
-        int sumOfNumbers[] = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
-            int sum = 0;
-        for int(i : sumOfNumbers )
-                sum += i;
-            System.out.println("The sum of our array is: " + sum);
+    //        4. Print the sum of the numbers
+    int sumOfNumbers[] = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
 
+    {
+        int sum = 0;
+        for (int i : sumOfNumbers)
+            sum += i;
+        System.out.println("The sum of our array is: " + sum);
+    }
 
-
-//        5. Print the sum of the numbers...
+    //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
 //           ...and numbers that come immediately after a 13 also do not count.
-//
 //          So [2, 7, 13, 2] would have sum of 9.
 
+    int sumOfNums[] = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
+
+    {
+        int sum = 0;
+        for (int i = 0; i < sumOfNums.length; i++) {
+            if (sumOfNums[i] >= 13) {
+
+            continue;
+            }
+            else
+                sum = sum + sumOfNums[i];
+
+            System.out.println("sumOfNums 13 and above:" + sum );
+        }
     }
+
+}
+
+
+
 
 
